@@ -2,11 +2,6 @@
 - name: Basic tasks
   hosts: my-localhost
   tasks:
-    - name: Execute uptime command
-      command: uptime
-      register: uptime_result
-    - debug: var=uptime_result.stdout_lines
-
     - name: Check OS release
       command: cat /etc/os-release
       register: os_result
