@@ -8,7 +8,7 @@
   tasks:
     - name: Show deployment info
       debug:
-        msg:  |
+        msg: |
           Tag of the pipeline: {{ application_infra_tag }}
           Is Verify Pipeline: {{ is_verify }}
 
