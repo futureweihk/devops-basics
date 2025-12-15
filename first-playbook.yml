@@ -8,10 +8,10 @@
   tasks:
     - name: Show deployment info
       debug:
-        msg: |
+        msg:  |
           Tag of the pipeline: {{ application_infra_tag }}
           Is Verify Pipeline: {{ is_verify }}
-          
+
     - name: Check OS release
       command: cat /etc/os-release
       register: os_result
