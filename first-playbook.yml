@@ -1,6 +1,7 @@
 ---
 - name: Basic tasks
   hosts: my-localhost
+  gather_facts: yes
   tasks:
     - name: Check OS release
       command: cat /etc/os-release
