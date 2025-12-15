@@ -2,7 +2,16 @@
 - name: Basic tasks
   hosts: my-localhost
   gather_facts: yes
+  vars:
+    application_infra_tag: "{{ application_infra_tag }}"
+    is_verify: "{{ is_verify }}"
   tasks:
+    - name: Show deployment info
+      debug:
+        msg: |
+          Tag of the pipeline: {{ application_infra_tag }}
+          Is Verify Pipeline: {{ is_verify }}
+          
     - name: Check OS release
       command: cat /etc/os-release
       register: os_result
